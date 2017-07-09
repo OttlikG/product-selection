@@ -7,7 +7,7 @@ import Promise            from 'bluebird'
 
 import api_server_config  from '../server/api/config'
 import connectDatabase    from '../server/api/tools/initialize/connectDatabase.js'
-import Plant              from '../server/api/models/plant.js'
+import Product              from '../server/api/models/product.js'
 
 const debug = _debug('app:bin:populate-db')
 
@@ -23,7 +23,7 @@ debug(`Mongoose version: ${ mongoose.version }`)
   }
 
   try {
-    await Plant.remove()
+    await Product.remove()
     debug("DB cleaned")
   } catch (error) {
     debug('Error at DB clean up', error)
@@ -41,7 +41,7 @@ debug(`Mongoose version: ${ mongoose.version }`)
 })();
 
 function populateDatabase () {
-  const PLAIN_JSON_PATH = join(__dirname, '..', 'plant_data')
+  const PLAIN_JSON_PATH = join(__dirname, '..', 'server/api/fixtures')
 
   let readDir = Promise.promisify(fs.readdir)
   let readFile = Promise.promisify(fs.readFile)
@@ -58,10 +58,10 @@ function populateDatabase () {
   })
   .then(async (filePromiseArray) => {
     return Promise.each(filePromiseArray, async data => {
-      let createdPlant = JSON.parse(data)
-      let plant = await Plant.create(createdPlant)
+      let createdProduct = JSON.parse(data)
+      let product = await Product.create(createdProduct)
 
-      //if (plant) debug(`${ plant.common_name } was created`);
+      if (product) debug(`${ product.product_name } was created`);
     })
   })
 }

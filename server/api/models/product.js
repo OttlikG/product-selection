@@ -1,8 +1,10 @@
 
 import mongoose from 'mongoose';
 
-const testSchema = new mongoose.Schema({
-
+const productSchema = new mongoose.Schema({
+  category: String,
+  product_name: String,
+  location: String
 }, {
   versionKey: false,
   timestamps: {
@@ -14,4 +16,4 @@ const testSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model('Test', testSchema);
+export default mongoose.model('Product', productSchema);

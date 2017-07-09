@@ -6,7 +6,7 @@ let config = {
   },
   mongo: {
     host: 'localhost',
-    db_name: 'csa_development',
+    db_name: 'sky_development',
     options: { socketOptions: { keepAlive: 1 } }
   },
 };
