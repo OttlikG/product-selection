@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-export default function Basket ({ data }) {
+export default function Basket ({ data, push }) {
   function selectedProductionList (production) {
     return (
       <div key={production.id}>- { production.product_name}</div>
@@ -14,7 +14,7 @@ export default function Basket ({ data }) {
 
       { data.map(selectedProductionList) }
 
-      <button>Checkout</button>
+      <button onClick={() => push('confirmation')}>Checkout</button>
     </div>
   )
 }

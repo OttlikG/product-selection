@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import { useRouterHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
+import Cookies from 'js-cookie'
 import makeRoutes from './routes'
 import Root from './containers/Root'
 import configureStore from './redux/configureStore'
+
+Cookies.set('customerId', 'aaa');
 
 // Configure history for react-router
 const browserHistory = useRouterHistory(createBrowserHistory)({
