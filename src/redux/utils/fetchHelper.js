@@ -1,6 +1,5 @@
 
 import fetch        from 'isomorphic-fetch';
-import fetchJsonp   from 'fetch-jsonp'
 import { polyfill } from 'es6-promise';
 
 const defaultHeaders = {
@@ -31,13 +30,8 @@ export function xhrGet(url) {
   return fetch(url, {
     headers: buildHeaders(),
   })
-      .then(checkStatus)
-      .then(parseJSON);
-}
-
-export function xhrJsonpGet (url) {
-  return fetchJsonp(url)
-      .then(parseJSON)
+  .then(checkStatus)
+  .then(parseJSON);
 }
 
 export function xhrPost(url, data) {

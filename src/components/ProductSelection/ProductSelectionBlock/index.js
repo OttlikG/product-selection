@@ -7,13 +7,15 @@ import Basket from './Basket'
 
 // import classes from './index.scss'
 
-export default function ProductSelectionBlock () {
+export default function ProductSelectionBlock (props) {
+  const { sports, news, selected = [] } = props;
+
   return (
     <div>
       <div className="row">
-        <div className="col-xs-4"><Sports /></div>
-        <div className="col-xs-4"><News /></div>
-        <div className="col-xs-4"><Basket /></div>
+        <div className="col-xs-4"><Sports data={sports} /></div>
+        <div className="col-xs-4"><News data={news} /></div>
+        <div className="col-xs-4"><Basket data={selected} /></div>
       </div>
     </div>
   )

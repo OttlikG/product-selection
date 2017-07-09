@@ -10,7 +10,7 @@ export default (router) => {
       const { customerId } = ctx.query
       const location = await CustomerStub.find({ _id: customerId })
 
-      if (location && location.id) ctx.body = location.id
+      if (location && location.id) ctx.body = location
       else {
         errorResponse(ctx, {
           status: 404,
