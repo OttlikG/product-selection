@@ -3,16 +3,16 @@ import React, { Component }     from 'react'
 import { connect }              from 'react-redux';
 import ProductSelectionBlock    from 'components/ProductSelection/ProductSelectionBlock'
 import productionActions        from 'redux/actions/products'
+import { newsSelector, sportsSelector, selectedProducts } from 'redux/reducers/products'
 // import classes                  from './index.scss'
 
 class ProductSelection extends Component {
 
   componentDidMount () {
-    const { dispatch } = this.props;
-    const { productionSelection, getProducts } = productionActions
+    const { productionSelection, getProducts } = this.props;
 
-    // dispatch(productionSelection('aaa'));
-    dispatch(getProducts('aaa'));
+    // productionSelection('aaa')
+    getProducts('aaa')
   }
 
   render () {
@@ -24,18 +24,12 @@ class ProductSelection extends Component {
   }
 }
 
-const productSelector = category => products => {
-  return products.filter(p => p.category === category);
-}
-
-const newsSelector = productSelector('News')
-const sportsSelector = productSelector('Sports')
-
 export function mapStateToProps ({ products }) {
   return {
-    sports: sportsSelector(products.products),
-    news: newsSelector(products.products),
+    sports: sportsSelector(products),
+    news: newsSelector(products),
+    selectedProducts: selectedProducts(products)
   }
 }
 
-export default connect(mapStateToProps)(ProductSelection)
+export default connect(mapStateToProps, {...productionActions})(ProductSelection)

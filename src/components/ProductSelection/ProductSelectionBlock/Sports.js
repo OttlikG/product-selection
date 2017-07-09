@@ -1,10 +1,22 @@
 
-import React from 'react'
+import React            from 'react'
+import Checkbox         from 'components/Atoms/Checkbox'
 
-export default function Sports () {
+export default function Sports (props) {
+  const { data, selectProductById, selectedProducts } = props
+
   return (
     <div className="block sports-block">
-      Sports
+      <div>Sports</div>
+
+      { data.map(sport =>
+        <Checkbox
+          key={sport.id}
+          isSelected={sport.isSelected}
+          label={sport.product_name}
+          onChange={() => selectProductById(sport.id)}
+        />)
+      }
     </div>
   )
 }
