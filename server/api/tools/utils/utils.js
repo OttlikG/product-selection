@@ -8,12 +8,12 @@ export function randomId () {
   });
 }
 
-export function errorResponse ({ name, message: title } = {}, errorSpecification) {
+export function errorResponse (ctx, errorSpecification) {
   let errorObj = {
     id: randomId(),
-    title: `${name}: ${title}`,
     ...errorSpecification
   }
 
-  return { errors: [ errorObj ] }
+  ctx.body = { errors: [ errorObj ] }
+  ctx.status = errorSpecification.status
 }
