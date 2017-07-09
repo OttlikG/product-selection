@@ -1,11 +1,11 @@
 
 import Cookies                    from 'js-cookie'
 import { READ_TOKEN }             from 'redux/reducers/auth'
-import * as http                  from '../utils/fetchHelper.js'
 
-function readToken (customerId) {
-  return (dispatch, getState) => {
+export function readToken () {
+  return dispatch => {
     const customerId = Cookies.get('customerId')
+    console.log('customerId', customerId)
 
     return dispatch({ type: READ_TOKEN, customerId })
   };
