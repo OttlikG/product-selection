@@ -5,7 +5,7 @@ export const READ_TOKEN = 'products/READ_TOKEN'
 
 // INITIAL STATE
 
-const initialState = {
+export const initialState = {
   customerId: null,
 };
 

@@ -19,7 +19,8 @@
   "jest": {
     "globals": {},
     "modulePaths": [
-      "<rootDir>", "<rootDir>/src"
+      "<rootDir>",
+      "<rootDir>/src"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/test/test_environment.js",
     "moduleNameMapper": {
@@ -92,6 +93,7 @@
   "devDependencies": {
     "babel-eslint": "^6.0.0-beta.6",
     "babel-jest": "^20.0.3",
+    "deep-freeze": "0.0.1",
     "eslint": "^2.4.0",
     "eslint-config-standard": "^5.1.0",
     "eslint-config-standard-react": "^2.2.0",
