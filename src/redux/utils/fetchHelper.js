@@ -17,12 +17,19 @@ function checkStatus(response) {
   } else {
     var error = new Error(response.statusText);
     error.response = response;
-    throw error;
+    error.status = response.status
+
+    return Promise.reject(error)
   }
 }
 
 function parseJSON(response) {
   return response.json();
+}
+
+function parseJsonError(error) {
+  return error.response.json()
+    .then(error => Promise.reject(error))
 }
 
 export function xhrGet(url) {
@@ -31,7 +38,7 @@ export function xhrGet(url) {
     headers: buildHeaders(),
   })
   .then(checkStatus)
-  .then(parseJSON);
+  .then(parseJSON, parseJsonError);
 }
 
 export function xhrPost(url, data) {

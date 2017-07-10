@@ -4,6 +4,7 @@ import { toggle } from 'redux/utils/utils'
 // CONSTANTS
 
 export const LOAD_PRODUCTS = 'products/LOAD_PRODUCTS'
+export const LOAD_PRODUCTS_FAILURE = 'products/LOAD_PRODUCTS_FAILURE'
 export const SELECT_PRODUCTION = 'products/SELECT_PRODUCTION'
 
 // INITIAL STATE
@@ -11,6 +12,7 @@ export const SELECT_PRODUCTION = 'products/SELECT_PRODUCTION'
 const initialState = {
   products: [],
   selected: [],
+  errors: [],
 };
 
 // SELECTORS
@@ -38,6 +40,15 @@ export default function reducer (state = initialState, action = {}) {
       return {
         ...state,
         products,
+      }
+    }
+
+    case LOAD_PRODUCTS_FAILURE: {
+      const { error } = action
+
+      return {
+        ...state,
+        errors: error.errors,
       }
     }
 
