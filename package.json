@@ -19,7 +19,7 @@
   "jest": {
     "globals": {},
     "modulePaths": [
-      "<rootDir>"
+      "<rootDir>", "<rootDir>/src"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/test/test_environment.js",
     "moduleNameMapper": {

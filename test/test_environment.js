@@ -1,16 +1,13 @@
 import renderer from 'react-test-renderer';
 import shallowEqual from 'shallowequal'
 
-global.__API_URL__ = ''
-global.__EXTERNAL_CONFIG__ = {}
-global.__DEV__ = false
-global.__VERSION__ = 'test'
 global.window = {}
 global.localStorage = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn()
 }
+
 
 //https://github.com/facebook/react/issues/7386
 //jest.mock('react-dom');
