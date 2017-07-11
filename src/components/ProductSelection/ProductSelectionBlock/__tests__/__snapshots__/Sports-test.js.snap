@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sports shoud render all item 1`] = `
+<div
+  className="block sports-block"
+>
+  <div>
+    Sports
+  </div>
+  <div
+    className="sports-list"
+  >
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Chelsea TV
+      </label>
+    </div>
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Arsenal TV
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Sports should call action on change 1`] = `
+<div
+  className="block sports-block"
+>
+  <div>
+    Sports
+  </div>
+  <div
+    className="sports-list"
+  >
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Chelsea TV
+      </label>
+    </div>
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Arsenal TV
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Sports should set checked state if isSelected true 1`] = `
+<div
+  className="block sports-block"
+>
+  <div>
+    Sports
+  </div>
+  <div
+    className="sports-list"
+  >
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Chelsea TV
+      </label>
+    </div>
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Arsenal TV
+      </label>
+    </div>
+  </div>
+</div>
+`;
