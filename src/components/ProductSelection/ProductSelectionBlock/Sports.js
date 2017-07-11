@@ -3,7 +3,7 @@ import React            from 'react'
 import Checkbox         from 'components/Atoms/Checkbox'
 
 export default function Sports (props) {
-  const { data, selectProductById, selectedProducts } = props
+  const { data, selectProductById } = props
 
   return (
     <div className="block sports-block">

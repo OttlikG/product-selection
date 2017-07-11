@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductSelectionBox should render 3 block component 1`] = `
+<div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-xs-4"
+    >
+      <Sports
+        data={
+          Array [
+            Object {
+              "category": "Sports",
+              "id": "aaa",
+              "isSelected": true,
+              "location": "LONDON",
+              "product_name": "Chelsea TV",
+            },
+            Object {
+              "category": "Sports",
+              "id": "bbb",
+              "isSelected": false,
+              "location": "LONDON",
+              "product_name": "Arsenal TV",
+            },
+          ]
+        }
+        selectProductById={[Function]}
+      />
+    </div>
+    <div
+      className="col-xs-4"
+    >
+      <News
+        data={Array []}
+        selectProductById={[Function]}
+      />
+    </div>
+    <div
+      className="col-xs-4"
+    >
+      <Basket
+        data={
+          Array [
+            Object {
+              "category": "Sports",
+              "id": "aaa",
+              "isSelected": true,
+              "location": "LONDON",
+              "product_name": "Chelsea TV",
+            },
+          ]
+        }
+        push={[Function]}
+        selectProductById={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
