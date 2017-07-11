@@ -12,9 +12,11 @@ export default function Basket ({ data, push }) {
     <div className="block basket-block">
       <div>Basket</div>
 
-      { data.map(selectedProductionList) }
+      <div className="product-list">
+        { data.map(selectedProductionList) }
+      </div>
 
-      <button onClick={() => push('confirmation')}>Checkout</button>
+      <button className='checkout' onClick={() => push('confirmation')}>Checkout</button>
     </div>
   )
 }

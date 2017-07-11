@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basket should jump to confirmation page when checkout clicked 1`] = `
+<div
+  className="block basket-block"
+>
+  <div>
+    Basket
+  </div>
+  <div
+    className="product-list"
+  >
+    <div>
+      - 
+      Chelsea TV
+    </div>
+  </div>
+  <button
+    className="checkout"
+    onClick={[Function]}
+  >
+    Checkout
+  </button>
+</div>
+`;
+
+exports[`Basket should render 1 selected product 1`] = `
+<div
+  className="block basket-block"
+>
+  <div>
+    Basket
+  </div>
+  <div
+    className="product-list"
+  >
+    <div>
+      - 
+      Chelsea TV
+    </div>
+  </div>
+  <button
+    className="checkout"
+    onClick={[Function]}
+  >
+    Checkout
+  </button>
+</div>
+`;
