@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should call on change 1`] = `
+<div
+  className="checkbox"
+>
+  <label>
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    test label
+  </label>
+</div>
+`;
+
+exports[`Checkbox should load label text 1`] = `
+<div
+  className="checkbox"
+>
+  <label>
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    test label
+  </label>
+</div>
+`;
+
+exports[`Checkbox should set props on input 1`] = `
+<div
+  className="checkbox"
+>
+  <label>
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    test label
+  </label>
+</div>
+`;
