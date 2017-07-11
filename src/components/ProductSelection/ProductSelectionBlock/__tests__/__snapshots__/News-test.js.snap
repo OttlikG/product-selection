@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News shoud render all item 1`] = `
+<div
+  className="block news-block"
+>
+  <div>
+    News
+  </div>
+  <div
+    className="news-list"
+  >
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Sky News
+      </label>
+    </div>
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Sky Sports News
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`News should call action on change 1`] = `
+<div
+  className="block news-block"
+>
+  <div>
+    News
+  </div>
+  <div
+    className="news-list"
+  >
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Sky News
+      </label>
+    </div>
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Sky Sports News
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`News should set checked state if isSelected true 1`] = `
+<div
+  className="block news-block"
+>
+  <div>
+    News
+  </div>
+  <div
+    className="news-list"
+  >
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Sky News
+      </label>
+    </div>
+    <div
+      className="checkbox"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Sky Sports News
+      </label>
+    </div>
+  </div>
+</div>
+`;
