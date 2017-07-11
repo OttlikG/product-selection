@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductSelection componentDidMount should call readToken 1`] = `
+<div>
+  <ProductSelectionBlock
+    customerId="aaa"
+    productionSelection={[Function]}
+    readToken={[Function]}
+  />
+</div>
+`;
+
+exports[`ProductSelection componentWillReceiveProps should call productionSelection if cutomerId changed 1`] = `
+<div>
+  <ProductSelectionBlock
+    customerId="aaa"
+    productionSelection={[Function]}
+    readToken={[Function]}
+  />
+</div>
+`;

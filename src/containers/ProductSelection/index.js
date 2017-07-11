@@ -8,7 +8,7 @@ import authActions              from 'redux/actions/auth'
 import { newsSelector, sportsSelector, selectedProducts } from 'redux/reducers/products'
 // import classes                  from './index.scss'
 
-class ProductSelection extends Component {
+export class ProductSelection extends Component {
 
   componentDidMount () {
     const { readToken } = this.props;
